@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulación de Buddy Tree en 2D</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Simulación de Buddy Tree en 2D</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="insertForm" class="text-center mb-4">
+                    <div class="form-group">
+                        <label for="insertKey">Insertar Clave:</label>
+                        <input type="number" class="form-control" id="insertKey" required>
+                    </div>
+                    <button type="button" class="btn btn-success" onclick="insertKey()">Insertar</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <form id="deleteForm" class="text-center mb-4">
+                    <div class="form-group">
+                        <label for="deleteKey">Eliminar Clave:</label>
+                        <input type="number" class="form-control" id="deleteKey" required>
+                    </div>
+                    <button type="button" class="btn btn-danger" onclick="deleteKey()">Eliminar</button>
+                </form>
+            </div>
+        </div>
+        <canvas id="buddyTreeCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.5/examples/js/controls/OrbitControls.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
